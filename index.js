@@ -43,7 +43,11 @@ app.get("/pagar", async (req, res) => {
   } catch(err){
     return res.send(err.message)
   }
-  
+})
+
+app.post("/not", (req,res) => {
+  console.log(req.query)
+  res.send("OK")
 })
 
 app.listen(3000, (req, res) => {
