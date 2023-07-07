@@ -1,7 +1,7 @@
 const express = require("express")
 const MercadoPago = require("mercadopago")
 const app = express()
-const port = process.env.PORT || 80
+const port = process.env.PORT || 8080
 
 MercadoPago.configure({
   sandbox: true,
@@ -31,7 +31,7 @@ app.get("/pagar", async (req, res) => {
         unit_price: parseFloat(150)
       }
     ],
-    notification_url: "https://143.244.191.28/not",
+    //notification_url: "https://143.244.191.28/not",
     payer: {
       email: emailDoPagador
     },
