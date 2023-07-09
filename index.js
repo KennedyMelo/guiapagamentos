@@ -1,7 +1,7 @@
 const express = require("express")
 const MercadoPago = require("mercadopago")
 const app = express()
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 3000
 
 MercadoPago.configure({
   sandbox: true,
